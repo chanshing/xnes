@@ -1,4 +1,4 @@
-# Implementation of "Exponential Natural Evolution Strategies" (xNES) [http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf](http://www.jmlr.org/papers/volume15/wierstra14a/wierstra14a.pdf)
+# Implementation of "Exponential Natural Evolution Strategies" (xNES) [https://arxiv.org/abs/1106.4487](https://arxiv.org/abs/1106.4487)
 
     xnes = XNES(f, mu, amat)
     xnes.step(1000)
