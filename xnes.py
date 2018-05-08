@@ -36,11 +36,6 @@ class XNES(object):
         self.eta_sigma = eta_sigma
         self.eta_bmat = eta_bmat
 
-        # do not use these when hill-climbing
-        if npop == 1:
-            use_fshape = False
-            use_adasam = False
-
         # compute utilities if using fitness shaping
         if use_fshape:
             a = log(1+0.5*npop)
@@ -64,6 +59,11 @@ class XNES(object):
         self.counter = 0
         self.patience = patience
         self.history = {'eta_sigma':[], 'sigma':[], 'fitness':[]}
+
+        # do not use these when hill-climbing
+        if npop == 1:
+            self.use_fshape = False
+            self.use_adasam = False
 
     def step(self, niter):
         """ xNES """
