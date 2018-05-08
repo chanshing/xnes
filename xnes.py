@@ -168,15 +168,18 @@ if __name__ == '__main__':
         r = sum(square(x))
         return sp.sin(r)/r
 
-    mu = array([9999.,-9999.])  # bad init guess, solution is (0,0)
+    mu = array([9999.,-9999.])  # a bad init guess
     amat = eye(2)
 
     # when adasam, use conservative eta
-    xnes = XNES(f, mu, amat, n_jobs=1, npop=50, use_adasam=True, eta_bmat=0.01, eta_sigma=.1, patience=1000)
+    xnes = XNES(f, mu, amat, npop=50, use_adasam=True, eta_bmat=0.01, eta_sigma=.1, patience=9999)
     t0 = time.time()
-    xnes.step(2000)
+
+    for i in range(20):
+        xnes.step(100)
+        print "Current: ({},{})".format(*xnes.mu)
+
     print("Exact solution is (0,0)")
-    print("Estimated: ({},{})".format(*xnes.mu))
     print("Took {} secs".format(time.time()-t0))
 
     import matplotlib.pyplot as plt
