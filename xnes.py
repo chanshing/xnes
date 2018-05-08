@@ -1,3 +1,7 @@
+"""
+xNES from 'Natural Evolution Strategies'
+if n_jobs>1, I suggest using "export MKL_NUM_THREADS=1"
+"""
 import joblib
 import random
 import numpy as np

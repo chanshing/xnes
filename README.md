@@ -14,4 +14,8 @@ where
 
 See `xnes.py` for a specific example.
 
-*Notes:* Adaptative sampling (`use_adasam=True`) requires tuning the etas a bit to work well. First try without it.
+*Notes:* 
+
+- Adaptative sampling (`use_adasam=True`) requires tuning the etas a bit to work well. First try without it.
+- When using `n_jobs`>1, it is better to turn off multithreading: `export MKL_NUM_THREADS=1`
+- `n_jobs`>1 is normally better only if `f` is super expensive.
