@@ -1,6 +1,7 @@
 """
 xNES from 'Natural Evolution Strategies'
 if n_jobs>1, I suggest using "export MKL_NUM_THREADS=1"
+See at the bottom (under __main__) for an example of usage
 """
 import joblib
 import random
@@ -160,6 +161,8 @@ class XNES(object):
 
 
 if __name__ == '__main__':
+    ''' Example of usage code '''
+    
     import time
     np.random.seed(42)
     random.seed(42)
