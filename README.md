@@ -1,4 +1,8 @@
-# Implementation of "Exponential Natural Evolution Strategies" (xNES) [https://arxiv.org/abs/1106.4487](https://arxiv.org/abs/1106.4487)
+# Implementation of "Exponential Natural Evolution Strategies" (xNES) 
+
+[https://arxiv.org/abs/1106.4487](https://arxiv.org/abs/1106.4487)
+
+## Usage
 
     xnes = XNES(f, mu, amat)
     xnes.step(1000)
